@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --main-bg: #0b0c0f;
+    --main-fonts-color: #fff;
+    --main-btn-bg: #2f94fa;
+    --gray: #808080;
+    --main-btn-hover: #1d5fa0;
+    --logo-color: #C40C0C;
+    --light-gray: #EEEEEE;
+}
+
+@keyframes special {
+    0% {color: red; transform: scale(1);}
+    30% {color: yellow; transform: scale(1.3);}
+    60% {color: lightgreen; transform: scale(1);}
+    90% {color: lightblue; transform: scale(1.3);}
+    100% {color: red; transform: scale(1);}
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background: var(--gray);
+}
+
+nav {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.logo a {
+    color: var(--main-bg);
+}
+
+.logo a span {
+    color: var(--logo-color);
+}
+
+.menu {
+    height: 100%;
+}
+
+.menu ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.menu ul li {
+    padding: 0 1rem;
+}
+
+.menu ul li a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0b0c0f;
+}
+
+.menu ul li a:hover {
+    color: var(--main-fonts-color);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-con {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,280px);
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+    padding: 5rem 0 5rem 0;
+}
+
+.card {
+    width: 280px;
+    position: relative;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--main-bg);
+    cursor: pointer;
+}
+
+#standard {
+    order: 999;
+}
+
+#special {
+    order: 0;
+    background-color: var(--logo-color);
+    color: var(--main-fonts-color);
+}
+
+.hot-an {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    color: red;
+    font-size: 16px;
+    font-weight: 900;
+    background-color: var(--main-fonts-color);
+    border-radius: 50px;
+    padding: 0 15px;
+    animation: special;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.img-con {
+    width: 250px;
+    height: 160px;
+    overflow: hidden;
+}
+
+img {
+    width: 250px;
+    height: 160px;
+}
+
+.product-des {
+    padding: 1rem;
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray);
+}
+
+.copyright {
+    color: var(--main-fonts-color);
+}
